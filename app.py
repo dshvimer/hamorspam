@@ -12,7 +12,7 @@ def predict():
     x = vectorizer.transform(data['inputs'])
     predictions = model.predict(x)
     output = predictions
-    return jsonify(output)
+    return jsonify(output.tolist())
 
 if __name__ == '__main__':
     app.run(port=5000, debug=True)

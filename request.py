@@ -1,11 +1,14 @@
 import requests
 url = 'http://localhost:5000/predict'
 
-j = {
-    'inputs': [
+inputs= [
         'yo dude',
-        'free porn'
+        'free porn',
+        'hot xxx'
     ]
+j = {
+    'inputs': inputs
 }
+print("Inputs: ", inputs)
 r = requests.post(url,json=j)
 print(r.json())
